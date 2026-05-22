@@ -1,0 +1,56 @@
+[project]
+name = "kchunker"
+version = "0.1.0"
+description = "Lightweight, ultra-fast, terminal-first intelligent document chunking engine"
+readme = "README.md"
+requires-python = ">=3.12"
+
+[project.scripts]
+kchunker = "main:main"
+kchunker-gui = "gui:main"
+
+dependencies = [
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "structlog>=24.1.0",
+    "fastapi>=0.111.0",
+    "uvicorn>=0.30.0",
+    "pymupdf>=1.24.0",
+    "pdfplumber>=0.11.0",
+    "pandas>=2.2.0",
+    "openpyxl>=3.1.0",
+    "python-docx>=1.1.0",
+    "sentence-transformers>=2.7.0",
+    "faiss-cpu>=1.8.0",
+    "chromadb>=0.5.0",
+    "langchain>=0.2.0",
+    "langchain-community>=0.2.0",
+    "llama-index>=0.10.0",
+    "camelot-py>=0.11.0",
+    "opencv-python-headless>=4.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2.0",
+    "ruff>=0.4.0",
+    "black>=24.4.0",
+    "mypy>=1.10.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "C4", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true

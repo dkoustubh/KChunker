@@ -1,0 +1,24 @@
+Project: KChunker Engine Implementation
+RFQ No: RFQ-999-ENG
+Customer: DeepMind Advanced Agentic Coding Team
+Revision: 1.0.0
+
+This document defines the requirements and system architecture for the KChunker document parsing and chunking engine.
+The system needs to be extremely fast, support multiple file types (PDF, DOCX, XLSX, TXT, EML), and offer layout/table awareness.
+
+Our primary milestones are:
+1. Phase 3: Layout & OCR AI fallback implementation.
+2. Phase 4: Advanced Chunking engine supporting semantic, hierarchical, and table-aware algorithms.
+3. Phase 5: Embeddings and vector store persistence.
+4. Phase 6: Async processing and CLI integration.
+
+Table 1: Implementation Timeline and Status
+| Phase | Feature Description | Status | Priority |
+|---|---|---|---|
+| Phase 1 & 2 | Core plugin system and standard parsers | Complete | High |
+| Phase 3 | OCR & Layout detection wrappers | Complete | High |
+| Phase 4 | Advanced chunkers (semantic, hierarchical, table, email) | Complete | Critical |
+| Phase 5 | Embeddings and Vector DB (FAISS & ChromaDB) | Complete | High |
+| Phase 6 | Async parallel workflows & CLI interface | Complete | Medium |
+
+For questions or support, contact help@example.com or submit a ticket to engineering.

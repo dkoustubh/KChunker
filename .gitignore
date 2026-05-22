@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and logs
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+*.log
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Project-specific database and chunk storage
+storage/
+vector_db/chroma/
+vector_db/faiss/
+.env
+
+# Ignore user configuration and local testing artifacts
+plan.md

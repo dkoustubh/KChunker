@@ -1,0 +1,5 @@
+#!/bin/bash
+# KChunker GUI Shortcut Launcher
+# Allows starting the GUI dashboard with: ./gui [--file <path>]
+cd "$(dirname "$0")"
+PYTHONPATH=. .venv/bin/python gui.py "$@"
