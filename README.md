@@ -47,18 +47,50 @@ graph TD
 ```
 
 ## Installation & Setup
-Ensure you have `uv` installed:
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
 
-Install the dependencies:
-```bash
-uv sync
-```
+### macOS & Ubuntu (Linux)
+You can set up KChunker automatically using the installer script, or run manual setup commands:
+
+* **Automatic Shortcut**:
+  ```bash
+  ./install.sh
+  ```
+* **Manual Setup**:
+  1. Install `uv` if you haven't:
+     ```bash
+     curl -LsSf https://astral.sh/uv/install.sh | sh
+     ```
+  2. Sync dependencies:
+     ```bash
+     uv sync
+     ```
+
+### Windows OS
+You can install dependencies automatically via the batch installer or perform manual commands:
+
+* **Automatic Shortcut**:
+  Double-click `install.bat`
+* **Manual Setup**:
+  1. Open PowerShell and run to install `uv`:
+     ```powershell
+     irm https://astral.sh/uv/install.ps1 | iex
+     ```
+  2. Sync dependencies:
+     ```powershell
+     uv sync
+     ```
+
+---
 
 ## Running the CLI
+
+### macOS & Ubuntu (Linux)
 ```bash
+uv run python main.py --file <path_to_document>
+```
+
+### Windows OS
+```cmd
 uv run python main.py --file <path_to_document>
 ```
 
@@ -72,7 +104,7 @@ You can launch the interactive Dear PyGui dashboard using any of the following s
    uv run python main.py --gui --file <path_to_document>
    ```
 
-2. **Project Root Shortcut Script**:
+2. **Project Root Shortcut Script (macOS / Linux)**:
    ```bash
    ./gui
    # Or with auto-ingestion:
@@ -84,6 +116,9 @@ You can launch the interactive Dear PyGui dashboard using any of the following s
    uv run kchunker-gui
    ```
 
-4. **macOS Double-Clickable Command**:
-   Simply double-click the `launch_gui.command` file in Finder. It will open Terminal, let you drag-and-drop a file path, and start the GUI dashboard.
+4. **Double-Clickable GUI Shortcuts**:
+   * **macOS**: Double-click `launch_gui.command`. It opens Terminal, prompts for a file path (optional), and runs the dashboard.
+   * **Windows OS**: Double-click `launch_gui.bat`. It opens the Command Prompt, prompts for a file path (optional), and launches the dashboard.
+   * **Ubuntu / Linux**: Run `./launch_gui.sh` or double-click it. It opens Terminal, prompts for a file path (optional), and starts the dashboard.
+
 
